@@ -1,0 +1,112 @@
+options {
+<% if !@forwarders.empty? -%>
+    forwarders { <%= @forwarders.join("; ") %>; };
+<% end -%>
+<% if !@transfers_out.empty? -%>
+	transfers-out <%= @transfers_out -%>;
+<% end -%>
+<% if !@transfers_in.empty? -%>
+	transfers-in <%= @transfers_in -%>;
+<% end -%>
+<% if !@transfers_per_ns.empty? -%>
+	transfers-per-ns <%= @transfers_per_ns -%>;
+<% end -%>
+<% if !@transfer_format.empty? -%>
+	transfer-format <%= @transfer_format -%>;
+<% end -%>
+<% if !@tcp_clients.empty? -%>
+	tcp-clients <%= @tcp_clients -%>;
+<% end -%>
+<% if !@recursive_clients.empty? -%>
+	recursive-clients <%= @recursive_clients -%>;
+<% end -%>
+<% if !@listen_on_port.empty? -%>
+  listen-on port <%= @listen_on_port %> { <%= @listen_on_addr.join("; ") %>; };
+<% end -%>
+<% if !@listen_on_v6_port.empty? -%>
+  listen-on-v6 port <%= @listen_on_v6_port %> { <%= @listen_on_v6_addr.join("; ") %>; };
+<% end -%>
+<% if !@notify.empty? -%>
+	notify <%= @notify -%>;
+<% end -%>
+<% if !@auth_nxdomain.empty? -%>
+	auth-nxdomain <%= @auth_nxdomain -%>;
+<% end -%>
+<% if !@directory.empty? -%>
+	directory <%= @directory -%>;
+<% end -%>
+<% if !@pid.empty? -%>
+	pid-file <%= @pid -%>;
+<% end -%>
+<% if !@version.empty? -%>
+	version <%= @version -%>;
+<% end -%>
+<% if !@dump_file.empty? -%>
+	dump-file <%= @dump_file -%>;
+<% end -%>
+<% if !@statistics_file.empty? -%>
+	statistics-file <%= @statistics_file -%>;
+<% end -%>
+<% if !@memstatistics_file.empty? -%>
+	memstatistics-file <%= @memstatistics_file -%>;
+<% end -%>
+<% if !@allow_query.empty? -%>
+  allow-query { <%= @allow_query.join("; ") %>; };
+<% end -%>
+<% if !@allow_query_cache.empty? -%>
+  allow-query-cache { <%= @allow_query_cache.join("; ") %>; };
+<% end -%>
+<% if !@recursion.empty? -%>
+	recursion <%= @recursion -%>;
+<% end -%>
+<% if !@allow_recursion.empty? -%>
+    allow-recursion { <%= @allow_recursion.join("; ") %>; };
+<% end -%>
+<% if !@query_source.empty? -%>
+	query-source address <%= @query_source -%>;
+<% end -%>
+<% if !@query_source_v6.empty? -%>
+	query-source-v6 address <%= @query_source_v6 -%>;
+<% end -%>
+<% if !@allow_transfer.empty? -%>
+  allow-transfer { <%= @allow_transfer.join("; ") %>; };
+<% end -%>
+<% if !@max_ncache_ttl.empty? -%>
+	max-ncache-ttl <%= @max_ncache_ttl -%>;
+<% end -%>
+<% if !@notify_source.empty? -%>
+	notify-source <%= @notify_source -%>;
+<% end -%>
+<% if !@notify_source_v6.empty? -%>
+	notify-source-v6 <%= @notify_source_v6 -%>;
+<% end -%>
+<% if !@transfer_source.empty? -%>
+	transfer-source <%= @transfer_source -%>;
+<% end -%>
+<% if !@also_notify.empty? -%>
+    also-notify { <%= @also_notify.join("; ") %>; };
+<% end -%>
+<% if !@transfer_source_v6.empty? -%>
+	transfer-source-v6 <%= @transfer_source_v6 -%>;
+<% end -%>
+<% if !@rate_limit.empty? -%>
+  rate-limit {
+  <% rate_limit.each do |line| -%>
+    <%= line %>;
+  <% end -%>
+  };
+<% end -%>
+<% if !@dnssec_enable.empty? -%>
+	dnssec-enable <%= @dnssec_enable -%>;
+<% end -%>
+<% if !@dnssec_validation.empty? -%>
+	dnssec-validation <%= @dnssec_validation -%>;
+<% end -%>
+<% if !@dnssec_lookaside.empty? -%>
+	dnssec-lookaside <%= @dnssec_lookaside -%>;
+<% end -%>
+  /* Path to ISC DLV key */
+<% if !@bindkeys_file.empty? -%>
+	bindkeys-file <%= @bindkeys_file -%>;
+<% end -%>
+};
