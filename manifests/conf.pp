@@ -37,6 +37,8 @@ class bind::conf (
   $transfers_out = undef,
   $transfers_per_ns = undef,
   $version = undef,
+  $configdir = $::bind::params::configdir,
+  $configfile = $::bind::params::configfile,
 ) inherits ::bind::params {
 
   concat::fragment { "${bind::conf::}-general"
