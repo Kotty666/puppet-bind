@@ -42,7 +42,44 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class bind {
+class bind (
+  $manage_package = $::bind::params::manage_package,
+  $packagename = $::bind::params::packagename,
+  $chroot = $::bind::params::chroot,
+  $manage_service = $::bind::params::manage_service,
+  $service_enable = $::bind::params::service_enable,
+  $binduser = $::bind::params::binduser,
+  $bindgroup = $::bind::params::bindgroup,
+  $configdir = $::bind::params::configdir,
+  $configfile = $::bind::params::configfile,
+) inherits ::bind::params {
 
+  if $manage_package == true {
+    package { 'bind_pkg':
+      ensure => 'installed',
+      name   => $packagename,
+    }
+  }
+
+  if $::bind::mange_service == true {
+    service { 'bind':
+      ensure => $::bind::service_enable,
+      name   => $::bind::packagename,
+      enable => $::bind::service_enable,
+    }
+  }
+
+  concat { $::bind::configfile:
+    owner => 'root',
+    group => $::bind::bindgroup,
+    mode  => '0644',
+    path  => $::bind::configdir,
+  }
+
+  concat::fragment { 'File Header':
+    target  => $::bind::configfile,
+    content => "# This file is managed by Puppet. DO NOT EDIT.\n",
+    order   => 01,
+  }
 
 }
