@@ -2,7 +2,6 @@
 class bind::config (
   $directory = $bind::params::configdir,
   $pid = $bind::params::pid,
-  $auth_nxdomain = $bind::params::auth_nxdomain,
   $configdir = $bind::params::configdir,
   $configfile = $bind::params::configfile,
   $allow_query = undef,
@@ -12,7 +11,6 @@ class bind::config (
   $also_notify = undef,
   $auth_nxdomain = undef,
   $bindkeys_file = undef,
-  $directory = undef,
   $dnssec_enable = undef,
   $dnssec_lookaside = undef,
   $dnssec_validation = undef,
