@@ -41,8 +41,8 @@ class bind::config (
   $version = undef,
   ) inherits ::bind::params {
 
-  concat::fragment { 'config_general'
-    target  => $::configfile,
+  concat::fragment { 'config_general':
+    target  => ${::configfile},
     order   => 02,
     content => template("${::module_name}/general.erb"),
   }
