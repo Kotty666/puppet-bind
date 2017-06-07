@@ -109,4 +109,9 @@ options {
 <% if !@bindkeys_file.empty? -%>
 	bindkeys-file <%= @bindkeys_file -%>;
 <% end -%>
+<% if !@optional_args.empty? -%>
+  <% @optoinal_args.sort_by  {|key, value| key}.each do |key,value| -%>
+  <%= @key -%> <%= @value -%>;
+  <% end -%>
+<% end -%>
 };
