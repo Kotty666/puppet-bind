@@ -9,6 +9,7 @@ class bind::params {
   $bindgroup = 'bind'
   $configdir = '/etc/bind'
   $configfile = 'named.conf'
+  $global_notify = 'no'
 
   case $::operatingsystem {
     'Debian':

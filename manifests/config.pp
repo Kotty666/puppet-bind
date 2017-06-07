@@ -20,7 +20,7 @@ class bind::config (
   $listen_on_v6_port = undef,
   $max_ncache_ttl = undef,
   $memstatistics_file = undef,
-  $notify = undef,
+  $global_notify = $bind::params::global_notify,
   $notify_source = undef,
   $notify_source_v6 = undef,
   $query_source = undef,
