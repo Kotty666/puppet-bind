@@ -42,7 +42,7 @@ class bind::config (
   ) inherits ::bind::params {
 
   concat::fragment { 'config_general':
-    target  => ${::configfile},
+    target  => $::configfile,
     order   => 02,
     content => template("${::module_name}/general.erb"),
   }
