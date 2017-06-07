@@ -1,8 +1,10 @@
 # general bind configuration
-class bind::conf (
-  $directory = $::bind::params::configdir,
-  $pid = $::bind::params::pid,
-  $auth_nxdomain = $::bind::params::auth_nxdomain,
+class bind::config (
+  $directory = $bind::params::configdir,
+  $pid = $bind::params::pid,
+  $auth_nxdomain = $bind::params::auth_nxdomain,
+  $configdir = $bind::params::configdir,
+  $configfile = $bind::params::configfile,
   $allow_query = undef,
   $allow_query_cache = undef,
   $allow_recursion = undef,
@@ -37,12 +39,10 @@ class bind::conf (
   $transfers_out = undef,
   $transfers_per_ns = undef,
   $version = undef,
-  $configdir = $::bind::params::configdir,
-  $configfile = $::bind::params::configfile,
-) inherits ::bind::params {
+  ) inherits ::bind::params {
 
-  concat::fragment { "${::bind::conf::}_general"
-    target  => $::bind::configfile,
+  concat::fragment { "config_general"
+    target  => ${::configfile},
     order   => 02,
     content => template("${module_name}/general.erb"),
   }

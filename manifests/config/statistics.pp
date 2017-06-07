@@ -1,15 +1,15 @@
 # this define creates the acl part in named.conf
-define bind::conf::statistics (
+define bind::config::statistics (
   $port,
   $source,
   $ip = $name,
 ) {
 
-  validate_array($::bind::conf::statistics::source)
+  validate_array($::bind::config::statistics::source)
 
-  $real_source = join($::bind::conf::statistics::source,';')
+  $real_source = join($::bind::config::statistics::source,';')
 
-  concat::fragment { $bind::conf::statistics::name:
+  concat::fragment { $bind::config::statistics::name:
     target  => $::bind::configfile,
     order   => 03,
     content => template("${module_name}/statistics.erb"),

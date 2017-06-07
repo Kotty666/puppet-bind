@@ -1,14 +1,14 @@
 # this define creates the acl part in named.conf
-define bind::conf::acl (
+define bind::config::acl (
   $data,
   $aclname = $name,
 ) {
   include
 
-  validate_string($::bind::conf::acl::aclname)
-  validate_array($::bind::conf::acl::data)
+  validate_string($::bind::config::acl::aclname)
+  validate_array($::bind::config::acl::data)
 
-  concat::fragment { $::bind::conf::acl::aclname:
+  concat::fragment { $::bind::config::acl::aclname:
     target  => $::bind::configfile,
     order   => 02,
     content => template("${module_name}/acl.erb"),
