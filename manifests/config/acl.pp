@@ -11,7 +11,7 @@ define bind::config::acl (
   concat::fragment { $::bind::config::acl::aclname:
     target  => $::bind::configfile,
     order   => 02,
-    content => template("${:module_name}/acl.erb"),
+    content => template("${::module_name}/acl.erb"),
   }
 
 }
