@@ -10,5 +10,4 @@ define bind::config::logging::channel
     order   => 05,
     content => template("${::module_name}/channel.erb"),
   }
-  
 }

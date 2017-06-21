@@ -10,5 +10,4 @@ define bind::config::logging::category
     order   => 10,
     content => template("${::module_name}/category.erb"),
   }
-  
 }
