@@ -9,7 +9,7 @@ define bind::config::statistics (
 
   $real_source = join($::bind::config::statistics::source,';')
 
-  concat::fragment { $bind::config::statistics::name:
+  concat::fragment { $::bind::config::statistics::title:
     target  => $::bind::configfile,
     order   => 03,
     content => template("${module_name}/statistics.erb"),

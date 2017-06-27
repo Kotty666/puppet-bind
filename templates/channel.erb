@@ -1,5 +1,21 @@
   channel <%= @channel -%> {
-<% target.each do |line| -%>
-    <%= line %>;
+<% if !@filename.empty? -%>
+    filename <%= @filename -%>
+<% end -%>  
+<% if !@fileversion.empty? -%>
+ <%= @fileversion -%>
+<% end -%>  
+<% if !@filesize.empty? -%>
+ <%= @filesize -%>
 <% end -%>
+;
+<% if !@syslog.empty? -%>
+    syslog <%= @syslog -%>;
+<% end -%>  
+<% if !@severity.empty? -%>
+    severity <%= @severity -%>;
+<% end -%>
+    print_category = <%= @print_category -%>;
+    print_severity = <%= @print_severity -%>;
+    print_time = <%= @print_time -%>;
   }

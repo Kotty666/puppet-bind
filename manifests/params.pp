@@ -10,6 +10,7 @@ class bind::params {
   $configdir = '/etc/bind'
   $configfile = 'named.conf'
   $global_notify = 'no'
+  $pid = '/var/run/named/named.pid'
 
   case $::operatingsystem {
     'Debian':
