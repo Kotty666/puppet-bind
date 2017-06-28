@@ -32,7 +32,7 @@ define bind::config::view::zones(
   $min_refresh_time = undef,
   $min_retry_time = undef,
   $multi_master = undef,
-  $notify = undef,
+  $notify_type = undef,
   $notify_source = undef,
   $notify_source_v6 = undef,
   $sig_validity_interval = undef,
