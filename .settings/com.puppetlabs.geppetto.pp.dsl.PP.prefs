@@ -1,0 +1,5 @@
+com.puppetlabs.geppetto.pp.dsl.PP.useProjectSettings=true
+eclipse.preferences.version=1
+formatterIndentSize=2
+formatterPreferredWidth=140
+formatterSpacesForTabs=true

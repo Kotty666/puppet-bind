@@ -1,0 +1,10 @@
+view <%= @view_name -%> {
+<% if !@match_clients.empty? -%>
+    match_clients { <%= @match_clients %>; };
+<% end -%>	
+<% if !@match_destinations.empty? -%>
+    match_destinations { <%= @match_destinations %>; };
+<% end -%>		
+<% if !@match_recursive_only.empty? -%>
+    match_recursive_only { <%= @match_recursive_only %>; };
+<% end -%>		

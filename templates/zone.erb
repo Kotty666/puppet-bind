@@ -1,0 +1,129 @@
+zone <%= zone_name -%> {
+	type <%= type -%>
+<% if !@view_name.empty? -%>
+	view_name <%= @view_name -%>
+<% end -%>
+<% if !@zone_name.empty? -%>
+	zone_name <%= @zone_name -%>
+<% end -%>
+<% if !@allow_notify.empty? -%>
+	allow_notify <%= @allow_notify -%>
+<% end -%>
+<% if !@allow_query.empty? -%>
+	allow_query <%= @allow_query -%>
+<% end -%>
+<% if !@allow_transfer.empty? -%>
+	allow_transfer <%= @allow_transfer -%>
+<% end -%>
+<% if !@allow_update.empty? -%>
+	allow_update <%= @allow_update -%>
+<% end -%>
+<% if !@allow_update_forwarding.empty? -%>
+	allow_update_forwarding <%= @allow_update_forwarding -%>
+<% end -%>
+<% if !@also_notify .empty? -%>
+	also_notify  <%= @also_notify  -%>
+<% end -%>
+<% if !@alt_transfer_source.empty? -%>
+	alt_transfer_source <%= @alt_transfer_source -%>
+<% end -%>
+<% if !@alt_transfer_source_v6.empty? -%>
+	alt_transfer_source_v6 <%= @alt_transfer_source_v6 -%>
+<% end -%>
+<% if !@check_names.empty? -%>
+	check_names <%= @check_names -%>
+<% end -%>
+<% if !@database.empty? -%>
+	database <%= @database -%>
+<% end -%>
+<% if !@delegation_only.empty? -%>
+	delegation_only <%= @delegation_only -%>
+<% end -%>
+<% if !@dialup.empty? -%>
+	dialup <%= @dialup -%>
+<% end -%>
+<% if !@forward.empty? -%>
+	forward <%= @forward -%>
+<% end -%>
+<% if !@forwarders.empty? -%>
+	forwarders <%= @forwarders -%>
+<% end -%>
+<% if !@in_view.empty? -%>
+	in_view <%= @in_view -%>
+<% end -%>
+<% if !@ixfr_from_differences.empty? -%>
+	ixfr_from_differences <%= @ixfr_from_differences -%>
+<% end -%>
+<% if !@key_directory.empty? -%>
+	key_directory <%= @key_directory -%>
+<% end -%>
+<% if !@masterfile_format.empty? -%>
+	masterfile_format <%= @masterfile_format -%>
+<% end -%>
+<% if !@masters.empty? -%>
+	masters <%= @masters -%>
+<% end -%>
+<% if !@max_journal_size.empty? -%>
+	max_journal_size <%= @max_journal_size -%>
+<% end -%>
+<% if !@max_refresh_time.empty? -%>
+	max_refresh_time <%= @max_refresh_time -%>
+<% end -%>
+<% if !@max_retry_time.empty? -%>
+	max_retry_time <%= @max_retry_time -%>
+<% end -%>
+<% if !@max_transfer_idle_in.empty? -%>
+	max_transfer_idle_in <%= @max_transfer_idle_in -%>
+<% end -%>
+<% if !@max_transfer_idle_out.empty? -%>
+	max_transfer_idle_out <%= @max_transfer_idle_out -%>
+<% end -%>
+<% if !@max_transfer_time_in.empty? -%>
+	max_transfer_time_in <%= @max_transfer_time_in -%>
+<% end -%>
+<% if !@max_transfer_time_out.empty? -%>
+	max_transfer_time_out <%= @max_transfer_time_out -%>
+<% end -%>
+<% if !@min_refresh_time.empty? -%>
+	min_refresh_time <%= @min_refresh_time -%>
+<% end -%>
+<% if !@min_retry_time.empty? -%>
+	min_retry_time <%= @min_retry_time -%>
+<% end -%>
+<% if !@multi_master.empty? -%>
+	multi_master <%= @multi_master -%>
+<% end -%>
+<% if !@notify.empty? -%>
+	notify <%= @notify -%>
+<% end -%>
+<% if !@notify_source.empty? -%>
+	notify_source <%= @notify_source -%>
+<% end -%>
+<% if !@notify_source_v6.empty? -%>
+	notify_source_v6 <%= @notify_source_v6 -%>
+<% end -%>
+<% if !@sig_validity_interval.empty? -%>
+	sig_validity_interval <%= @sig_validity_interval -%>
+<% end -%>
+<% if !@server_addresses.empty? -%>
+	server_addresses <%= @server_addresses -%>
+<% end -%>
+<% if !@server_names.empty? -%>
+	server_names <%= @server_names -%>
+<% end -%>
+<% if !@transfer_source.empty? -%>
+	transfer_source <%= @transfer_source -%>
+<% end -%>
+<% if !@transfer_source_v6.empty? -%>
+	transfer_source_v6 <%= @transfer_source_v6 -%>
+<% end -%>
+<% if !@update_policy.empty? -%>
+	update_policy <%= @update_policy -%>
+<% end -%>
+<% if !@use_alt_transfer_source.empty? -%>
+	use_alt_transfer_source <%= @use_alt_transfer_source -%>
+<% end -%>
+<% if !@zone_statistics.empty? -%>
+	zone_statistics <%= @zone_statistics -%>
+<% end -%>
+} ;

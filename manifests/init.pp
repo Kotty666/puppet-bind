@@ -52,6 +52,7 @@ class bind (
   $bindgroup = $::bind::params::bindgroup,
   $configdir = $::bind::params::configdir,
   $configfile = $::bind::params::configfile,
+  $zonefolder = $::bind::params::zonefolder
 ) inherits ::bind::params {
 
   if $manage_package == true {

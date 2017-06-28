@@ -11,6 +11,7 @@ class bind::params {
   $configfile = 'named.conf'
   $global_notify = 'no'
   $pid = '/var/run/named/named.pid'
+  $zonefolder = 'zones'
 
   case $::operatingsystem {
     'Debian':
