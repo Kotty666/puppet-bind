@@ -1,5 +1,5 @@
 # create zone files
-define bind::config::view::zones (
+define bind::config::view::zone (
   $type,
   $view_name,
   $zone_name               = $::bind::config::zone::title,
