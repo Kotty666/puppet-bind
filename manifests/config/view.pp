@@ -1,5 +1,5 @@
 # create view files
-define ::bind::config::view(
+define bind::config::view(
   $view_name = $::title,
   $match_clients = undef,
   $match_destinations = undef,
