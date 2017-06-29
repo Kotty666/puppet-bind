@@ -5,11 +5,11 @@ define bind::record (
   $ttl         = 86400,
   $mailcontact = "hostmasnter.${::bind::record::name}",
   $serial      = 1,
-  $refresh     = "1D",
-  $retry       = "30M",
-  $expire      = "4W",
-  $minimum     = "10M",
-  $zonefolder  = "zones") {
+  $refresh     = '1D',
+  $retry       = '30M',
+  $expire      = '4W',
+  $minimum     = '10M',
+  $zonefolder  = 'zones') {
   concat { $::bind::record::zone:
     owner => 'root',
     group => $::bind::bindgroup,
