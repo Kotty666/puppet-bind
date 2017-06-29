@@ -1,0 +1,7 @@
+$TTL	<%= @ttl -%> ;
+@	IN	SOA	<%= @primary_ns -%>.	<%= @mailcontact -%>. (
+			<%= @serial -%>		; Serial
+			<%= @refresh -%>	; Refresh
+			<%= @retry -%>		; Retry
+			<%= @expire -%>		; Expire
+			<%= @minimum -%> )	; Minimum

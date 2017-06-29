@@ -15,7 +15,7 @@ define bind::config::view ($view_name = $::title, $match_clients = undef, $match
 
   concat::fragment { 'View Footer':
     target  => "view-${::view_name}",
-    order   => 00,
+    order   => 99,
     content => '} ;',
   }
 
